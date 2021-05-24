@@ -25,6 +25,13 @@ app.get('/', (req, res) => {
 	res.send('Hello from server')
 })
 
+const products = ['Router', 'Switch', 'Link']
+
+app.get('/api/products', (req, res) => {
+	res.send(products)
+})
+
+
 // Sist: fånga alla övriga request
 // För att frontend routing ska fungera
 app.get('*', (req, res) => {

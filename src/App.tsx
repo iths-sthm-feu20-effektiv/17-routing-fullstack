@@ -18,6 +18,7 @@ function App() {
                     <Link to="/productss"> Produkter (fel) </Link>
                     <NavLink to="/products" activeClassName="active"> Produkter </NavLink>
                     <NavLink to="/cart" activeClassName="active"> Kundvagn </NavLink>
+                    <NavLink to="/unknown-component"> Okänd </NavLink>
                 </nav>
             </header>
 
