@@ -7,6 +7,7 @@ const path = require('path')
 // Heroku uses process.env.PORT
 const PORT = process.env.PORT || 1339
 const buildFolder = path.join(__dirname, '../build')
+const imageFolder = path.join(__dirname, './img')
 
 // Middleware
 // Logger - skriv ut info om inkommande request
@@ -17,6 +18,8 @@ app.use((req, res, next) => {
 app.use( express.json() )
 app.use( cors() )   // Cross-Origin Resource Sharing
 app.use( express.static(buildFolder) )
+app.use( '/img', express.static(imageFolder) )
+// '/img/hamster-1.jpg' i frontend
 
 
 // Routes
